@@ -1,0 +1,136 @@
+@import "_normalize.css";
+/* @import "_fonts.css";
+@import "_overall.css"; */
+
+/* components imports */
+
+/* NAV BAR  */
+
+#title nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 124px;
+  z-index: 1;
+  padding: 0 5%;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(
+    #000,
+    rgba(0, 0, 0, 0.95) 30.3%,
+    rgba(0, 0, 0, 0.9) 40.3%,
+    rgba(0, 0, 0, 0.85) 45.8%,
+    rgba(0, 0, 0, 0.8) 50.5%,
+    rgba(0, 0, 0, 0.75) 55.4%,
+    rgba(0, 0, 0, 0.7) 60.5%,
+    rgba(0, 0, 0, 0.65) 65.9%,
+    rgba(0, 0, 0, 0.6) 70.7%,
+    rgba(0, 0, 0, 0.55) 75%,
+    rgba(0, 0, 0, 0.25) 90%,
+    transparent
+  );
+}
+
+#title nav .wrapper {
+  width: 100%;
+  height: 124px;
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+#title .nav-top {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+#title .nav-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+}
+
+#title nav .nav-link {
+  padding: 0;
+  padding-right: 1em;
+  font-size: smaller;
+}
+
+#title nav h1 {
+  color: aliceblue;
+  font-size: 2rem;
+  position: absolute;
+  left: calc(50% - 101px);
+  top: auto;
+  bottom: 25px;
+}
+
+@media (min-width: 1500px) {
+  #title nav .wrapper {
+    max-width: 1250px;
+  }
+}
+
+/* NAV BAR finished */
+
+
+/* CAROUSEL */
+
+/* #title .carousel-inner {
+  height: 100vh;
+} */
+
+#title .carousel-inner h1 {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 25%;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+#title .carousel-inner p {
+  color: white;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 50%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#title .carousel-inner img {
+  filter: grayscale(20%);
+  height: 100vh;
+  object-fit: cover;
+}
+
+@media (max-width: 450px) {
+  #title .carousel-inner img {
+    height: 80vh;
+  }
+}
+
+/* Carousel finished */
+
+
+#features div{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10% 0;
+}
+
+#features h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+
