@@ -201,15 +201,16 @@ body {
 
 @media (max-width: 900px) {
   #title .carousel-inner h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     top: 35%;
     padding: 0 5vw;
   }
 
   #title .carousel-inner p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     top: 55%;
     padding: 0 5vw;
+    font-family: 'Montserrat', sans-serif;
   }
 
   #title .carousel-inner .smaller-mob {
@@ -222,6 +223,9 @@ body {
   }
   #title .margin-lg {
     margin-top: 0;
+  }
+  #title div.blond-second img {
+    object-position: left;
   }
 }
 
