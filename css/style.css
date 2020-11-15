@@ -1,41 +1,41 @@
 @import "_normalize.css";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 /* @import "_fonts.css";
 @import "_overall.css"; */
-
 /* components imports */
-
 /* NAV BAR  */
-
 #title nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 124px;
-  z-index: 1;
+  z-index: 2;
   padding: 0 5%;
   border-bottom: 1px solid white;
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(
-    #000,
-    rgba(0, 0, 0, 0.95) 30.3%,
-    rgba(0, 0, 0, 0.9) 40.3%,
-    rgba(0, 0, 0, 0.85) 45.8%,
-    rgba(0, 0, 0, 0.8) 50.5%,
-    rgba(0, 0, 0, 0.75) 55.4%,
-    rgba(0, 0, 0, 0.7) 60.5%,
-    rgba(0, 0, 0, 0.65) 65.9%,
-    rgba(0, 0, 0, 0.6) 70.7%,
-    rgba(0, 0, 0, 0.55) 75%,
-    rgba(0, 0, 0, 0.25) 90%,
-    transparent
-  );
+  background: linear-gradient(#000,
+      rgba(0, 0, 0, 0.95) 30.3%,
+      rgba(0, 0, 0, 0.9) 40.3%,
+      rgba(0, 0, 0, 0.85) 45.8%,
+      rgba(0, 0, 0, 0.8) 50.5%,
+      rgba(0, 0, 0, 0.75) 55.4%,
+      rgba(0, 0, 0, 0.7) 60.5%,
+      rgba(0, 0, 0, 0.65) 65.9%,
+      rgba(0, 0, 0, 0.6) 70.7%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0.25) 90%,
+      transparent);
 }
+
 
 #title nav .wrapper {
   width: 100%;
-  height: 124px;
+  height: 100%;
   position: relative;
   min-width: 320px;
   margin: 0 auto;
@@ -68,63 +68,178 @@
   bottom: 25px;
 }
 
+#title nav .icon {
+  display: none;
+  font-size: 2rem;
+  width: 32px;
+  text-align: right;
+
+}
+
+#title nav .icon:hover {
+  color: #007bff;
+}
+
+#title .dropdown {
+
+  width: 100%;
+  z-index: 10;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
 @media (min-width: 1500px) {
   #title nav .wrapper {
     max-width: 1250px;
   }
 }
 
+@media (max-width: 1000px) {
+  #title nav {
+    padding: 0;
+    height: 15%;
+  }
+
+  #title nav .wrapper .nav-top, #title nav .wrapper .nav-bottom {
+    display: none;
+  }
+
+  #title nav .icon {
+    z-index: 100;
+    display: block;
+    position: absolute;
+    right: 7%;
+    bottom: 25px;
+  }
+
+  #title nav h1 {
+    left: 7%;
+    margin: 0;
+  }
+
+  #title .dropdown {
+    top: calc(100% + 1px);
+    left: 0;
+  }
+  #title .dropdown a {
+
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid #fff;
+  }
+/* STOP AT POSITION Z_INDEX */
+  #title .dropdown.responsive {
+    height: 85vh;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+
+}
+
 /* NAV BAR finished */
-
-
 /* CAROUSEL */
-
 /* #title .carousel-inner {
   height: 100vh;
 } */
+/* #title .carousel-inner {
+  z-index: 0;
+} */
+.carousel {
+  z-index: 0;
+}
+
+#title .mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* backdrop-filter: blur(4px); */
+}
 
 #title .carousel-inner h1 {
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   top: 25%;
   text-align: center;
   color: white;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 5rem;
+  padding: 0 10vw;
+
 }
 
 #title .carousel-inner p {
   color: white;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   top: 50%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  padding: 0 15vw;
+  text-shadow: 0 0 15px black;
+}
+
+#title .margin-lg {
+  margin-top: 10vh;
 }
 
 #title .carousel-inner img {
-  filter: grayscale(20%);
+  /* filter: grayscale(20%); */
   height: 100vh;
   object-fit: cover;
 }
 
-@media (max-width: 450px) {
-  #title .carousel-inner img {
-    height: 80vh;
+@media (max-width: 900px) {
+  #title .carousel-inner h1 {
+    font-size: 2.5rem;
+    top: 35%;
+    padding: 0 5vw;
+  }
+
+  #title .carousel-inner p {
+    font-size: 1.5rem;
+    top: 55%;
+    padding: 0 5vw;
+  }
+
+  #title .carousel-inner .smaller-mob {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  #title .carousel-inner .set-mobile {
+    top: 40%;
+  }
+  #title .margin-lg {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1300px){
+  #title .carousel-inner h1 {
+    font-size: 3.5rem;
   }
 }
 
 /* Carousel finished */
 
-
-#features div{
+/* Features start */
+#features div {
   background-color: black;
   color: white;
   text-align: center;
   padding: 10% 0;
+  border-top: 1px solid #fff;
 }
 
 #features h1 {
@@ -132,5 +247,74 @@
   font-size: 2rem;
 }
 
+@media (max-width: 900px) {
+  #features div {
+    padding: 15% 0;
+  }
+  #features h1 {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 5vw;
+  }
+}
+
+/* Features done */
 
 
+/* ABOUT US */
+
+#about {
+  height: 100vh;
+  position: relative;
+}
+#about h2 {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 5%;
+  left: 5%;
+}
+#about .row {
+  margin: 0;
+  height: 100%;
+}
+
+#about .block-img {
+height: 100%;
+width: 100%;
+background-image: url(../img/block-img.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+#about .block-content {
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+#about h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  #about {
+    height: auto;
+  }
+
+  #about h2 {
+    font-size: 18px;
+  }
+  #about .block-img {
+    height: 35vh;
+  }
+  #about .block-content {
+    height: 35vh;
+  }
+  #about h3 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
