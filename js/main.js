@@ -1,3 +1,18 @@
+$(document).ready(function(){
+  $("#nav-button").on('click', openNavBar);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 function openNavBar() {
   let icon = document.getElementById("icon-img");
   let x = document.getElementById("myTopnav");

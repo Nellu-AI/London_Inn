@@ -1,11 +1,10 @@
 @import "_normalize.css";
 
+/* components imports */
 body {
   font-family: 'Montserrat', sans-serif;
 }
-/* @import "_fonts.css";
-@import "_overall.css"; */
-/* components imports */
+
 /* NAV BAR  */
 #title nav {
   position: absolute;
@@ -31,7 +30,6 @@ body {
       rgba(0, 0, 0, 0.25) 90%,
       transparent);
 }
-
 
 #title nav .wrapper {
   width: 100%;
@@ -73,7 +71,6 @@ body {
   font-size: 2rem;
   width: 32px;
   text-align: right;
-
 }
 
 #title nav .icon:hover {
@@ -81,7 +78,6 @@ body {
 }
 
 #title .dropdown {
-
   width: 100%;
   z-index: 10;
   height: 0;
@@ -122,8 +118,8 @@ body {
     top: calc(100% + 1px);
     left: 0;
   }
-  #title .dropdown a {
 
+  #title .dropdown a {
     background-color: black;
     color: white;
     padding: 1rem 0;
@@ -131,23 +127,16 @@ body {
     font-size: 1rem;
     border-bottom: 1px solid #fff;
   }
-/* STOP AT POSITION Z_INDEX */
+
+  /* STOP AT POSITION Z_INDEX */
   #title .dropdown.responsive {
     height: 85vh;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
-
-
 }
 
 /* NAV BAR finished */
 /* CAROUSEL */
-/* #title .carousel-inner {
-  height: 100vh;
-} */
-/* #title .carousel-inner {
-  z-index: 0;
-} */
 .carousel {
   z-index: 0;
 }
@@ -155,12 +144,11 @@ body {
 #title .mask {
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
-  /* backdrop-filter: blur(4px); */
 }
 
 #title .carousel-inner h1 {
@@ -174,7 +162,6 @@ body {
   text-transform: uppercase;
   font-size: 5rem;
   padding: 0 10vw;
-
 }
 
 #title .carousel-inner p {
@@ -221,22 +208,23 @@ body {
   #title .carousel-inner .set-mobile {
     top: 40%;
   }
+
   #title .margin-lg {
     margin-top: 0;
   }
+
   #title div.blond-second img {
     object-position: left;
   }
 }
 
-@media (min-width: 900px) and (max-width: 1300px){
+@media (min-width: 900px) and (max-width: 1300px) {
   #title .carousel-inner h1 {
     font-size: 3.5rem;
   }
 }
 
 /* Carousel finished */
-
 /* Features start */
 #features div {
   background-color: black;
@@ -255,6 +243,7 @@ body {
   #features div {
     padding: 15% 0;
   }
+
   #features h1 {
     font-size: 18px;
     line-height: 30px;
@@ -263,14 +252,12 @@ body {
 }
 
 /* Features done */
-
-
 /* ABOUT US */
-
 #about {
   height: 100vh;
   position: relative;
 }
+
 #about h2 {
   position: absolute;
   z-index: 1;
@@ -278,24 +265,27 @@ body {
   top: 5%;
   left: 5%;
 }
+
 #about .row {
   margin: 0;
   height: 100%;
 }
 
 #about .block-img {
-height: 100%;
-width: 100%;
-background-image: url(../img/block-img.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/block-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 #about .block-content {
   display: flex;
   align-items: center;
   padding: 0 10%;
 }
+
 #about h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -311,12 +301,15 @@ background-position: center;
   #about h2 {
     font-size: 18px;
   }
+
   #about .block-img {
     height: 35vh;
   }
+
   #about .block-content {
     height: 35vh;
   }
+
   #about h3 {
     font-size: 20px;
     line-height: 1.5;
