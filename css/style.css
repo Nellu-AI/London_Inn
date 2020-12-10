@@ -293,7 +293,7 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   #about {
     height: auto;
   }
@@ -314,4 +314,151 @@ body {
     font-size: 20px;
     line-height: 1.5;
   }
+}
+
+
+/* PRICE part */
+
+#price {
+  height: 90vh;
+  border-top: 1px solid #000;
+}
+
+#price h2 {
+  margin: 3% 0;
+  padding-left: 5%;
+  margin-bottom: 0;
+}
+
+#price table {
+  margin: 0 auto;
+  line-height: 3rem;
+  height: 100%;
+
+}
+
+#price th {
+  width: 15%;
+  text-align: center;
+  font-weight: 400;
+}
+#price th:first-of-type {
+  background-color: #fff;
+  color: #000;
+}
+
+#price td {
+  text-align: center;
+  border-bottom: 3px solid #000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+#price .type-name {
+  width: 20%;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+}
+
+#price .dark-block {
+  display: inline-block;
+
+  background-color: #000;
+  color: #fff;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+#price .mobile-price {
+  display: none;
+}
+
+@media (max-width:1050px) {
+  #price table {
+    line-height: 1.5;
+    height: 80%;
+    margin-top: 10%;
+  }
+
+
+}
+@media (max-height:900px){
+  #price table {
+    line-height: 1.5;
+    height: 70%;
+    margin-top: 3%;
+  }
+
+}
+@media (max-width:900px) {
+
+  #price {
+    height: auto;
+  }
+  #price h2 {
+    font-size: 18px;
+  }
+
+#price table {
+  display: none;
+}
+#price .mobile-price {
+  display: block;
+  margin-top: 5%;
+}
+#price .card-group {
+  display: block
+}
+#price .card-body {
+  padding: 0.5rem;
+}
+
+}
+
+/* Дополнительные услуги */
+
+#add-price .card {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+#add-price .card-title {
+  text-align: center;
+}
+#add-price .card-text {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+  #add-price {
+    padding: 0 15px;
+  }
+#add-price .card-group {
+  display: block;
+}
+#add-price .card {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+#add-price .card-title {
+  text-align: left;
+}
+#add-price .card-text {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+}
+#add-price .card-body {
+  padding: 0.5rem;
+}
+#add-price .mobile-invisible {
+  display: none;
+}
 }
