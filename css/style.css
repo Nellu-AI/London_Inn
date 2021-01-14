@@ -1,8 +1,13 @@
 @import "_normalize.css";
+@font-face {
+  font-family: "Attentica";
+  src: url(Attentica.ttf) format("truetype"),
+    url(AttenticaUltraLight.otf) format("opentype");
+}
 
 /* components imports */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* NAV BAR  */
@@ -11,24 +16,26 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 124px;
+  height: 120px;
   z-index: 2;
   padding: 0 5%;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(#000,
-      rgba(0, 0, 0, 0.95) 30.3%,
-      rgba(0, 0, 0, 0.9) 40.3%,
-      rgba(0, 0, 0, 0.85) 45.8%,
-      rgba(0, 0, 0, 0.8) 50.5%,
-      rgba(0, 0, 0, 0.75) 55.4%,
-      rgba(0, 0, 0, 0.7) 60.5%,
-      rgba(0, 0, 0, 0.65) 65.9%,
-      rgba(0, 0, 0, 0.6) 70.7%,
-      rgba(0, 0, 0, 0.55) 75%,
-      rgba(0, 0, 0, 0.25) 90%,
-      transparent);
+  background: linear-gradient(
+    #000,
+    rgba(0, 0, 0, 0.95) 30.3%,
+    rgba(0, 0, 0, 0.9) 40.3%,
+    rgba(0, 0, 0, 0.85) 45.8%,
+    rgba(0, 0, 0, 0.8) 50.5%,
+    rgba(0, 0, 0, 0.75) 55.4%,
+    rgba(0, 0, 0, 0.7) 60.5%,
+    rgba(0, 0, 0, 0.65) 65.9%,
+    rgba(0, 0, 0, 0.6) 70.7%,
+    rgba(0, 0, 0, 0.55) 75%,
+    rgba(0, 0, 0, 0.25) 90%,
+    transparent
+  );
 }
 
 #title nav .wrapper {
@@ -42,13 +49,13 @@ body {
 #title .nav-top {
   position: absolute;
   right: 0;
-  top: 8px;
+  top: 50%;
 }
 
 #title .nav-bottom {
   position: absolute;
   left: 0;
-  bottom: 18px;
+  top: 50%;
 }
 
 #title nav .nav-link {
@@ -57,24 +64,24 @@ body {
   font-size: smaller;
 }
 
-#title nav h1 {
-  color: aliceblue;
-  font-size: 2rem;
+#title .wrapper img {
   position: absolute;
-  left: calc(50% - 101px);
-  top: auto;
-  bottom: 25px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #title nav .icon {
   display: none;
+  color: white;
   font-size: 2rem;
   width: 32px;
   text-align: right;
 }
 
 #title nav .icon:hover {
-  color: #007bff;
+  color: #fff;
 }
 
 #title .dropdown {
@@ -91,13 +98,24 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  #title .wrapper img {
+    height: 70px;
+  }
   #title nav {
     padding: 0;
     height: 15%;
   }
+}
 
-  #title nav .wrapper .nav-top, #title nav .wrapper .nav-bottom {
+@media (max-width: 1050px) {
+  #title .wrapper img {
+    height: 70px;
+    left: 15%;
+  }
+
+  #title nav .wrapper .nav-top,
+  #title nav .wrapper .nav-bottom {
     display: none;
   }
 
@@ -105,18 +123,19 @@ body {
     z-index: 100;
     display: block;
     position: absolute;
-    right: 7%;
+    right: 15%;
     bottom: 25px;
   }
 
-  #title nav h1 {
+  /* #title nav h1 {
     left: 7%;
     margin: 0;
-  }
+  } */
 
   #title .dropdown {
     top: calc(100% + 1px);
     left: 0;
+    flex-direction: column;
   }
 
   #title .dropdown a {
@@ -132,6 +151,17 @@ body {
   #title .dropdown.responsive {
     height: 85vh;
     background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 400px) {
+  #title .wrapper img {
+    left: 70px;
+    height: 64px;
+  }
+  #title nav .icon {
+    right: 10%;
+    font-size: 40px;
   }
 }
 
@@ -152,13 +182,15 @@ body {
 }
 
 #title .carousel-inner h1 {
+  font-family: "Attentica", sans-serif;
+  letter-spacing: 1rem;
   position: absolute;
   width: 100%;
   z-index: 2;
-  top: 25%;
+  top: 33%;
   text-align: center;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 5rem;
   padding: 0 10vw;
@@ -169,15 +201,16 @@ body {
   position: absolute;
   width: 100%;
   z-index: 2;
-  top: 50%;
+  top: 65%;
   text-align: center;
-  font-size: 2.5rem;
-  padding: 0 15vw;
+  font-size: 2rem;
+  padding: 0 20vw;
   text-shadow: 0 0 15px black;
 }
 
-#title .margin-lg {
-  margin-top: 10vh;
+#title .carousel-item:nth-of-type(3) h1 {
+  padding: 0 15vw;
+  transform: translateY(-30%);
 }
 
 #title .carousel-inner img {
@@ -185,44 +218,49 @@ body {
   height: 100vh;
   object-fit: cover;
 }
+#title .carousel-inner img.mobile {
+  display: none;
+}
 
 @media (max-width: 900px) {
   #title .carousel-inner h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     top: 35%;
     padding: 0 5vw;
   }
 
   #title .carousel-inner p {
     font-size: 1.2rem;
-    top: 55%;
+    top: 60%;
     padding: 0 5vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
-  #title .carousel-inner .smaller-mob {
-    font-size: 2rem;
+  #title .carousel-item:nth-of-type(3) h1 {
     padding: 0;
-  }
-
-  #title .carousel-inner .set-mobile {
-    top: 40%;
-  }
-
-  #title .margin-lg {
-    margin-top: 0;
+    transform: translateY(-40%);
   }
 
   #title div.blond-second img {
     object-position: left;
   }
-}
 
+  .carousel-indicators {
+    bottom: 8%;
+  }
+  #title .carousel-inner img:not(.mobile) {
+    display: none;
+  }
+  #title .carousel-inner img.mobile {
+    display: block;
+  }
+}
+/* 
 @media (min-width: 900px) and (max-width: 1300px) {
   #title .carousel-inner h1 {
     font-size: 3.5rem;
   }
-}
+} */
 
 /* Carousel finished */
 /* Features start */
@@ -316,7 +354,6 @@ body {
   }
 }
 
-
 /* PRICE part */
 
 #price {
@@ -334,7 +371,6 @@ body {
   margin: 0 auto;
   line-height: 3rem;
   height: 100%;
-
 }
 
 #price th {
@@ -374,25 +410,21 @@ body {
   display: none;
 }
 
-@media (max-width:1050px) {
+@media (max-width: 1050px) {
   #price table {
     line-height: 1.5;
     height: 80%;
     margin-top: 10%;
   }
-
-
 }
-@media (max-height:900px){
+@media (max-height: 900px) {
   #price table {
     line-height: 1.5;
     height: 70%;
     margin-top: 3%;
   }
-
 }
-@media (max-width:900px) {
-
+@media (max-width: 900px) {
   #price {
     height: auto;
   }
@@ -400,20 +432,19 @@ body {
     font-size: 18px;
   }
 
-#price table {
-  display: none;
-}
-#price .mobile-price {
-  display: block;
-  margin-top: 5%;
-}
-#price .card-group {
-  display: block
-}
-#price .card-body {
-  padding: 0.5rem;
-}
-
+  #price table {
+    display: none;
+  }
+  #price .mobile-price {
+    display: block;
+    margin-top: 5%;
+  }
+  #price .card-group {
+    display: block;
+  }
+  #price .card-body {
+    padding: 0.5rem;
+  }
 }
 
 /* Дополнительные услуги */
@@ -434,31 +465,30 @@ body {
 }
 
 @media (max-width: 600px) {
-
   #add-price {
     padding: 0 15px;
   }
-#add-price .card-group {
-  display: block;
-}
-#add-price .card {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid rgba(0,0,0,.125);
-}
+  #add-price .card-group {
+    display: block;
+  }
+  #add-price .card {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
 
-#add-price .card-title {
-  text-align: left;
-}
-#add-price .card-text {
-  text-align: left;
-  font-size: 1rem;
-  font-weight: normal;
-}
-#add-price .card-body {
-  padding: 0.5rem;
-}
-#add-price .mobile-invisible {
-  display: none;
-}
+  #add-price .card-title {
+    text-align: left;
+  }
+  #add-price .card-text {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  #add-price .card-body {
+    padding: 0.5rem;
+  }
+  #add-price .mobile-invisible {
+    display: none;
+  }
 }
