@@ -399,6 +399,11 @@ body {
   border-top: 1px solid #000;
 }
 
+#price .font-price {
+  font-family: "Attentica", sans-serif;
+  font-size: 28px;
+}
+
 #price h2 {
   margin: 3% 0;
   padding-left: 5%;
@@ -499,6 +504,12 @@ body {
 
 /* Дополнительные услуги */
 
+#add-price .font-price {
+  font-family: "Attentica", sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+
 #add-price .card {
   background-color: #000;
   color: #fff;
@@ -522,11 +533,6 @@ body {
   }
   #add-price .card-group {
     display: block;
-  }
-  #add-price .card {
-    /* background-color: #fff;
-    color: #000; */
-    /* border: 1px solid rgba(0, 0, 0, 0.125); */
   }
 
   #add-price .card-title {
