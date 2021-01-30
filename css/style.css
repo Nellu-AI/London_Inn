@@ -64,12 +64,17 @@ body {
   font-size: smaller;
 }
 
+#title .nav-top .nav-link {
+  padding-right: 0;
+  padding-left: 1em;
+}
+
 #title .wrapper img {
   position: absolute;
   height: 100px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, -50%);
 }
 
 #title nav .icon {
@@ -104,7 +109,7 @@ body {
   }
   #title nav {
     padding: 0;
-    height: 15%;
+    height: 15vh;
   }
 }
 
@@ -133,7 +138,7 @@ body {
   } */
 
   #title .dropdown {
-    top: calc(100% + 1px);
+    top: 100%;
     left: 0;
     flex-direction: column;
   }
@@ -166,6 +171,7 @@ body {
 }
 
 /* NAV BAR finished */
+
 /* CAROUSEL */
 .carousel {
   z-index: 0;
@@ -183,7 +189,6 @@ body {
 
 #title .carousel-inner h1 {
   font-family: "Attentica", sans-serif;
-  letter-spacing: 1rem;
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -192,7 +197,8 @@ body {
   color: white;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 5rem;
+  letter-spacing: 1rem;
+  font-size: 8rem;
   padding: 0 10vw;
 }
 
@@ -203,14 +209,17 @@ body {
   z-index: 2;
   top: 65%;
   text-align: center;
-  font-size: 2rem;
-  padding: 0 20vw;
+  font-size: 2.5rem;
+  padding: 0 15vw;
   text-shadow: 0 0 15px black;
 }
 
 #title .carousel-item:nth-of-type(3) h1 {
   padding: 0 15vw;
-  transform: translateY(-30%);
+  transform: translateY(-40%);
+}
+#title .carousel-item:nth-of-type(4) p {
+  padding: 0 10vw;
 }
 
 #title .carousel-inner img {
@@ -222,23 +231,52 @@ body {
   display: none;
 }
 
+@media (max-width: 1450px) {
+  #title .carousel-inner h1 {
+    font-size: 6rem;
+    letter-spacing: 0.7rem;
+  }
+
+  #title .carousel-inner p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  #title .carousel-inner h1 {
+    font-size: 5rem;
+  }
+
+  #title .carousel-inner p {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   #title .carousel-inner h1 {
-    font-size: 3rem;
-    top: 35%;
+    font-size: 4rem;
+    top: 35vh;
     padding: 0 5vw;
+    letter-spacing: 0.5rem;
   }
 
   #title .carousel-inner p {
     font-size: 1.2rem;
-    top: 60%;
+    top: 65vh;
     padding: 0 5vw;
     font-family: "Montserrat", sans-serif;
   }
 
   #title .carousel-item:nth-of-type(3) h1 {
-    padding: 0;
-    transform: translateY(-40%);
+    padding: 0 5vw;
+    font-size: 3.5rem;
+    transform: translateY(-30%);
+  }
+  #title .carousel-item:nth-of-type(4) h1 {
+    transform: translateY(-30%);
+  }
+  #title .carousel-item:nth-of-type(4) p {
+    padding: 0 5vw;
   }
 
   #title div.blond-second img {
@@ -246,7 +284,7 @@ body {
   }
 
   .carousel-indicators {
-    bottom: 8%;
+    bottom: 5vh;
   }
   #title .carousel-inner img:not(.mobile) {
     display: none;
@@ -269,7 +307,6 @@ body {
   color: white;
   text-align: center;
   padding: 10% 0;
-  border-top: 1px solid #fff;
 }
 
 #features h1 {
@@ -357,6 +394,7 @@ body {
 /* PRICE part */
 
 #price {
+  background-color: #000;
   height: 90vh;
   border-top: 1px solid #000;
 }
@@ -365,6 +403,7 @@ body {
   margin: 3% 0;
   padding-left: 5%;
   margin-bottom: 0;
+  color: #fff;
 }
 
 #price table {
@@ -378,14 +417,13 @@ body {
   text-align: center;
   font-weight: 400;
 }
-#price th:first-of-type {
-  background-color: #fff;
-  color: #000;
+
+#price table tr {
+  border-bottom: 1px solid #fff;
 }
 
 #price td {
   text-align: center;
-  border-bottom: 3px solid #000;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -416,6 +454,10 @@ body {
     height: 80%;
     margin-top: 10%;
   }
+
+  #price .card-group .card {
+    border-left: 1px solid #fff;
+  }
 }
 @media (max-height: 900px) {
   #price table {
@@ -427,6 +469,7 @@ body {
 @media (max-width: 900px) {
   #price {
     height: auto;
+    padding-bottom: 15px;
   }
   #price h2 {
     font-size: 18px;
@@ -444,6 +487,13 @@ body {
   }
   #price .card-body {
     padding: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  #price .mobile-price .card-group:last-child .card:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -466,15 +516,17 @@ body {
 
 @media (max-width: 600px) {
   #add-price {
-    padding: 0 15px;
+    padding: 15px;
+    padding-top: 0;
+    background-color: #000;
   }
   #add-price .card-group {
     display: block;
   }
   #add-price .card {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    /* background-color: #fff;
+    color: #000; */
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
   }
 
   #add-price .card-title {
