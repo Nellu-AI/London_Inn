@@ -609,7 +609,11 @@ body {
   cursor: pointer;
   opacity: 0.7;
 }
-
+@media (max-width: 600px) {
+  .footer-logo {
+    width: 64px;
+  }
+}
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,6 +701,7 @@ body {
   text-align: center;
   display: block;
   font-weight: 700;
+  font-size: 18px;
   color: #666;
   text-decoration: none;
   -webkit-transition: 0.3s;
