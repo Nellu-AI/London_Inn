@@ -149,6 +149,7 @@ body {
     padding: 1rem 0;
     text-align: center;
     font-size: 1rem;
+    font-weight: 300;
     border-bottom: 1px solid #fff;
   }
 
@@ -268,7 +269,7 @@ body {
   }
 
   #title .carousel-item:nth-of-type(3) h1 {
-    padding: 0 5vw;
+    padding: 0 1vw;
     font-size: 3.5rem;
     transform: translateY(-30%);
   }
